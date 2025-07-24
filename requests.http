@@ -1,0 +1,50 @@
+# Register an admin
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123",
+  "role": "admin"
+}
+
+# Register an employee
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "employee1",
+  "password": "emp123",
+  "role": "employee"
+}
+
+# Login as employee
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "employee1",
+  "password": "emp123"
+}
+
+# Check-in (replace <token> with the token from login)
+POST http://localhost:3000/api/attendance/check-in
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{}
+
+# Check-out (replace <token> and <id> with attendance ID)
+POST http://localhost:3000/api/attendance/check-out/<id>
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{}
+
+# View employee logs (replace <token>)
+GET http://localhost:3000/api/attendance/logs
+Authorization: Bearer <token>
+
+# View all logs (admin only, replace <token>)
+GET http://localhost:3000/api/attendance/all-logs
+Authorization: Bearer <token>
