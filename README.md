@@ -28,5 +28,5 @@ A simplified RESTful API for managing employee attendance, built with **Node.js*
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/employee-attendance-system.git
+git clone https://github.com/SankaviKanesalingam/employee-attendance-system.git
 cd employee-attendance-system
